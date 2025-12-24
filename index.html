@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/sh-logo.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SH Ingeniería | Soluciones Eléctricas y Tecnológicas</title>
+
+    <meta name="description"
+        content="Ingeniería eléctrica, domótica, sistemas de refrigeración y diseño de infraestructura energética. ">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            black: '#0a0a0a',
+                            dark: '#111111',
+                            gray: '#222222',
+                            accent: '#ffffff'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Fondo estilo 'Tech' abstracto */
+        .bg-grid {
+            background-size: 50px 50px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+
+        /* Efecto Glow en textos */
+        .text-glow {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Transición suave para las tarjetas */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 40px -10px rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-brand-black text-white font-sans antialiased selection:bg-white selection:text-black">
+
+    <nav class="fixed w-full z-50 bg-brand-black/80 backdrop-blur-lg border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="text-3xl font-black tracking-tighter text-white">SH</div>
+                <div class="h-6 w-px bg-white/30 mx-1"></div>
+                <div class="text-xs uppercase tracking-[0.2em] text-gray-400 group-hover:text-white transition-colors">
+                    Ingeniería</div>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+                <a href="#servicios" class="hover:text-white transition-colors">Servicios</a>
+                <a href="#proyectos" class="hover:text-white transition-colors">Portafolio</a>
+                <!-- <a href="#nosotros" class="hover:text-white transition-colors">Empresa</a> -->
+                <a href="#contacto"
+                    class="text-white bg-white/10 border border-white/20 px-5 py-2 rounded-full hover:bg-white hover:text-black transition-all">
+                    Contáctanos
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 overflow-hidden">
+        <div class="absolute inset-0 bg-grid z-0 opacity-50"></div>
+        <div
+            class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 mb-8 border border-white/10 rounded-full text-xs font-semibold tracking-wider text-gray-400 uppercase bg-white/5">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    Soluciones de Ingeniería Integrales
+                </div>
+
+                <h1 class="text-5xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
+                    Ingeniería del <br>
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500 text-glow">Futuro.</span>
+                </h1>
+
+                <p class="text-lg text-gray-400 mb-10 max-w-xl leading-relaxed">
+                    Tu aliado en soluciones eléctricas, eficiencia energética y automatización.
+                    Diseñamos sistemas seguros y sostenibles para industrias y hogares.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contacto"
+                        class="bg-white text-black px-8 py-4 rounded-lg font-bold hover:bg-gray-200 transition-all flex items-center justify-center gap-2">
+                        Cotizar Proyecto <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#proyectos"
+                        class="group border border-white/20 px-8 py-4 rounded-lg font-bold hover:bg-white/5 transition-all flex items-center justify-center gap-2">
+                        Ver Experiencia <i data-lucide="chevron-down"
+                            class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative animate-float block mt-12 lg:mt-0">
+                <div class="relative z-10 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop"
+                        alt="Edificio Moderno"
+                        class="w-full h-auto object-cover opacity-100 hover:grayscale-0 transition-all duration-700">
+
+                    <div
+                        class="absolute bottom-6 left-6 right-6 bg-black/80 backdrop-blur-md p-4 rounded-xl border border-white/10 flex items-center justify-between">
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase">Eficiencia Energética</p>
+                            <p class="font-bold text-white">Normativa RETIE / NTC </p>
+                        </div>
+                        <i data-lucide="check-circle" class="text-white w-6 h-6"></i>
+                    </div>
+                </div>
+                <div class="absolute -inset-4 border border-white/5 rounded-3xl -z-10"></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="border-y border-white/10 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/5">
+                <div class="text-center px-4">
+                    <div class="text-4xl font-bold text-white mb-1">MT/BT</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">Redes Eléctricas
+                    </div>
+                </div>
+                <div class="text-center px-4">
+                    <div class="text-4xl font-bold text-white mb-1">5 MW</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">Energía Solar
+                    </div>
+                </div>
+                <div class="text-center px-4">
+                    <div class="text-4xl font-bold text-white mb-1">SHE-Q</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">Seguridad Integral</div>
+                </div>
+                <div class="text-center px-4">
+                    <div class="text-4xl font-bold text-white mb-1">24/7</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">Soporte Técnico
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-24 px-6 relative bg-brand-black">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 text-center max-w-2xl mx-auto">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Nuestras Áreas de Ingeniería</h2>
+                <p class="text-gray-400">Desde la automatización residencial hasta grandes infraestructuras
+                    offshore. </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-brand-gray border border-white/5 p-8 rounded-2xl card-hover group cursor-default">
+                    <div
+                        class="bg-white/5 w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-black transition-colors">
+                        <i data-lucide="zap" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Ingeniería Eléctrica</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-start gap-2"><span class="text-white mt-1">•</span> Diseño
+                            residencial e industrial </li>
+                        <li class="flex items-start gap-2"><span class="text-white mt-1">•</span> Redes MT y
+                            BT </li>
+                        <li class="flex items-start gap-2"><span class="text-white mt-1">•</span>
+                            Coordinación de protecciones </li>
+                    </ul>
+                </div>
+
+                <div class="bg-brand-gray border border-white/5 p-8 rounded-2xl card-hover group cursor-default">
+                    <div
+                        class="bg-white/5 w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-black transition-colors">
+                        <i data-lucide="sun" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Energía Solar y Eólica</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-start gap-2"><span class="text-white mt-1">•</span> Diseño sistemas
+                            fotovoltaicos </li>
+                        <li class="flex items-start gap-2"><span class="text-white mt-1">•</span> Montaje sistemas
+                            fotovoltaicos </li>
+                        <li class="flex items-start gap-2"><span class="text-white mt-1">•</span> Eficiencia
+                            energética </li>
+                    </ul>
+                </div>
+
+                <div class="bg-brand-gray border border-white/5 p-8 rounded-2xl card-hover group cursor-default">
+                    <div
+                        class="bg-white/5 w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-black transition-colors">
+                        <i data-lucide="thermometer" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Climatización (HVAC)</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-start gap-2"><span class="text-white mt-1">•</span> Sistemas
+                            de refrigeración </li>
+                        <li class="flex items-start gap-2"><span class="text-white mt-1">•</span> Estudios
+                            de confort térmico </li>
+                        <li class="flex items-start gap-2"><span class="text-white mt-1">•</span>
+                            Modernización de equipos </li>
+                    </ul>
+                </div>
+
+                <div class="bg-brand-gray border border-white/5 p-8 rounded-2xl card-hover group cursor-default">
+                    <div
+                        class="bg-white/5 w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-black transition-colors">
+                        <i data-lucide="smartphone" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Domótica e IoT</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-start gap-2"><span class="text-white mt-1">•</span>
+                            Iluminación inteligente </li>
+                        <li class="flex items-start gap-2"><span class="text-white mt-1">•</span> Seguridad
+                            y monitoreo remoto </li>
+                        <li class="flex items-start gap-2"><span class="text-white mt-1">•</span> Hogares
+                            inteligentes </li>
+                    </ul>
+                </div>
+
+                <div class="bg-brand-gray border border-white/5 p-8 rounded-2xl card-hover group cursor-default">
+                    <div
+                        class="bg-white/5 w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-black transition-colors">
+                        <i data-lucide="anchor" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Infraestructura Offshore</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-start gap-2"><span class="text-white mt-1">•</span>
+                            Distribucion MT/BT </li>
+                        <li class="flex items-start gap-2"><span class="text-white mt-1">•</span> Sistemas
+                            AISBACK </li>
+                        <li class="flex items-start gap-2"><span class="text-white mt-1">•</span> Sistema de
+                            protecciones electricas </li>
+                    </ul>
+                </div>
+
+                <div class="bg-brand-gray border border-white/5 p-8 rounded-2xl card-hover group cursor-default">
+                    <div
+                        class="bg-white/5 w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-black transition-colors">
+                        <i data-lucide="file-text" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Consultoría Técnica</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-start gap-2"><span class="text-white mt-1">•</span> Estudio de
+                            Arc Flash </li>
+                        <li class="flex items-start gap-2"><span class="text-white mt-1">•</span> Calidad de
+                            energía </li>
+                        <li class="flex items-start gap-2"><span class="text-white mt-1">•</span>
+                            Contaminación electromagnética </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="py-24 px-6 bg-white text-black">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-4">Proyectos Ejecutados</h2>
+                    <p class="text-gray-600 max-w-md">Experiencia comprobada en sectores industriales y comerciales.</p>
+                </div>
+                <a href="#contacto" class="hidden md:flex items-center gap-2 font-bold hover:gap-4 transition-all">
+                    Solicitar Portafolio PDF <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Carousel Container -->
+            <div class="relative overflow-hidden w-full group/carousel" id="projects-carousel-container">
+                <!-- Carousel Track -->
+                <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out">
+
+                    <!-- Slide 1: Solar -->
+                    <div class="min-w-full md:min-w-[50%] p-4">
+                        <div class="group cursor-pointer">
+                            <div class="overflow-hidden rounded-xl mb-6 relative">
+                                <div
+                                    class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10">
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2000&auto=format&fit=crop"
+                                    alt="Paneles Solares"
+                                    class="w-full h-72 object-cover transform group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-2xl font-bold mb-1">Diseño Sistema Solar</h3>
+                                    <p class="text-gray-600">FV de 5 MW </p>
+                                </div>
+                                <span
+                                    class="border border-black px-3 py-1 rounded-full text-xs font-bold uppercase">Solar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Red Aérea -->
+                    <div class="min-w-full md:min-w-[50%] p-4">
+                        <div class="group cursor-pointer">
+                            <div class="overflow-hidden rounded-xl mb-6 relative">
+                                <div
+                                    class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10">
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2000&auto=format&fit=crop"
+                                    alt="Red Eléctrica"
+                                    class="w-full h-72 object-cover transform group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-2xl font-bold mb-1">Red Aérea</h3>
+                                    <p class="text-gray-600">MT 34.5 kV </p>
+                                </div>
+                                <span
+                                    class="border border-black px-3 py-1 rounded-full text-xs font-bold uppercase">Media
+                                    Tensión</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Offshore -->
+                    <div class="min-w-full md:min-w-[50%] p-4">
+                        <div class="group cursor-pointer">
+                            <div class="overflow-hidden rounded-xl mb-6 relative">
+                                <div
+                                    class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10">
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1574689049597-7e6eb5856461?q=80&w=2667&auto=format&fit=crop"
+                                    alt="Plataforma Offshore"
+                                    class="w-full h-72 object-cover transform group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-2xl font-bold mb-1">Plataforma Offshore</h3>
+                                    <p class="text-gray-600">Oil & Gas </p>
+                                </div>
+                                <span
+                                    class="border border-black px-3 py-1 rounded-full text-xs font-bold uppercase">Offshore</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Domótica -->
+                    <div class="min-w-full md:min-w-[50%] p-4">
+                        <div class="group cursor-pointer">
+                            <div class="overflow-hidden rounded-xl mb-6 relative">
+                                <div
+                                    class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10">
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1558002038-1091a1661116?q=80&w=4000&auto=format&fit=crop"
+                                    alt="Casa Inteligente"
+                                    class="w-full h-72 object-cover transform group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-2xl font-bold mb-1">Domótica Residencial</h3>
+                                    <p class="text-gray-600">Automatización Total </p>
+                                </div>
+                                <span
+                                    class="border border-black px-3 py-1 rounded-full text-xs font-bold uppercase">IoT</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mt-8 text-center md:hidden">
+                <a href="#contacto" class="inline-flex items-center gap-2 font-bold underline">
+                    Solicitar Portafolio PDF <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-24 px-6 bg-brand-black border-t border-white/20 relative overflow-hidden">
+        <div class="absolute right-0 top-0 w-1/3 h-full bg-white/5 skew-x-12 pointer-events-none hidden lg:block"></div>
+
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 relative z-10">
+            <div>
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6">Hablemos de tu próximo proyecto.</h2>
+                <p class="text-gray-400 mb-10 text-lg">
+                    ¿Necesitas un diseño eléctrico, modernización HVAC o integración de domótica?
+                    Nuestro equipo está listo para ayudarte.
+                </p>
+
+                <div class="space-y-6">
+                    <div class="flex items-center gap-5">
+                        <div
+                            class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center border border-white/10">
+                            <i data-lucide="map-pin" class="text-white"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Ubicación</p>
+                            <p class="text-white">Barranquilla, Colombia </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-5">
+                        <div
+                            class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center border border-white/10">
+                            <i data-lucide="phone" class="text-white"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Teléfono / WhatsApp</p>
+                            <p class="text-white">+57 311 367 8171 </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-5">
+                        <div
+                            class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center border border-white/10">
+                            <i data-lucide="mail" class="text-white"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Correo Electrónico</p>
+                            <p class="text-white text-sm sm:text-base">
+                                Shingenieriadecalidadcolombia@gmail.com </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-5">
+                        <div
+                            class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center border border-white/10">
+                            <i data-lucide="instagram" class="text-white"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Redes Sociales</p>
+                            <p class="text-white text-sm sm:text-base">
+                                Próximamente </p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- <div class="mt-12 flex gap-4">
+                    <a href="#"
+                        class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </a>
+                </div> -->
+            </div>
+
+            <div class="bg-brand-gray/50 backdrop-blur-sm p-8 rounded-3xl border border-white/10 shadow-2xl">
+                <form name="contacto-sh" method="POST" data-netlify="true">
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-500 mb-2">Nombre Completo</label>
+                            <input type="text" name="name" id="contact-name"
+                                class="w-full bg-black/50 border border-white/10 rounded-lg p-4 text-white focus:border-white focus:outline-none transition-colors"
+                                placeholder="Tu nombre">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-500 mb-2">Correo
+                                Electrónico</label>
+                            <input type="email" name="email" id="contact-email"
+                                class="w-full bg-black/50 border border-white/10 rounded-lg p-4 text-white focus:border-white focus:outline-none transition-colors"
+                                placeholder="nombre@empresa.com">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-500 mb-2">Mensaje</label>
+                            <textarea id="message-content" name="message" rows="4"
+                                class="w-full bg-black/50 border border-white/10 rounded-lg p-4 text-white focus:border-white focus:outline-none transition-colors"
+                                placeholder="Detalles de tu proyecto..."></textarea>
+                        </div>
+                        <button type="button" onclick="sendWhatsAppMessage()"
+                            class="w-full bg-white text-black font-bold py-4 rounded-lg hover:bg-gray-200 transition-all flex items-center justify-center gap-2 group">
+                            Enviar Mensaje por WhatsApp <i data-lucide="send"
+                                class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
+            <p>&copy; 2025 SH Ingeniería de Calidad. Todos los derechos reservados.</p>
+        </div>
+    </section>
+
+    <a href="https://wa.me/573113678171" target="_blank"
+        class="fixed bottom-6 right-6 bg-white text-black px-6 py-4 rounded-full shadow-2xl hover:scale-105 transition-transform z-50 flex items-center gap-3 font-bold border-4 border-black">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg> Chat
+    </a>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script>
+        // Carousel Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.getElementById('carousel-track');
+            const slides = track.children;
+            const slideCount = slides.length;
+            let currentIndex = 0;
+            const intervalTime = 3000; // 3 segundos
+
+            // Ajustar el ancho según el viewport (1 slide movil, 2 slides desktop)
+            // Lógica simplificada: siempre movemos de a 1, pero visible depende de CSS
+
+            function updateCarousel() {
+                currentIndex++;
+                if (currentIndex >= slideCount) {
+                    currentIndex = 0;
+                }
+
+                // Calculamos el porcentaje a mover. 
+                // En móvil (min-w-full) es 100% por slide.
+                // En desktop (min-w-[50%]) es 50% por slide.
+                // Sin embargo, como estamos usando flex-basis/width, la propiedad transform translate
+                // se basa en el ancho del elemento contenedor o del slide.
+                // La forma más fácil es mover -100% * currentIndex si fuera 1 visible.
+                // Pero aquí tenemos variables.
+
+                // Verificamos si es móvil o desktop
+                const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+                const movePercentage = isDesktop ? 50 : 100;
+
+                // Ajuste para el loop infinito visual (opcional, aquí haremos reset simple)
+                if (isDesktop && currentIndex === slideCount - 1) {
+                    // Si estamos en el último y mostramos 2, el último quedaría con hueco.
+                    // Resetemos al principio para evitar espacios vacíos o dejarlo así.
+                    // Para simplificar, volvemos al inicio cuando llegamos al "final lógico"
+                    currentIndex = 0;
+                }
+
+                track.style.transform = `translateX(-${currentIndex * movePercentage}%)`;
+            }
+
+            let carouselInterval = setInterval(updateCarousel, intervalTime);
+
+            // Pausar en hover
+            const container = document.getElementById('projects-carousel-container');
+            container.addEventListener('mouseenter', () => clearInterval(carouselInterval));
+            container.addEventListener('mouseleave', () => carouselInterval = setInterval(updateCarousel, intervalTime));
+        });
+    </script>
+
+    <script>
+        // Función para enviar el mensaje por WhatsApp
+        function sendWhatsAppMessage() {
+            // 1. Obtener el contenido del mensaje, nombre y email
+            const messageTextarea = document.getElementById('message-content');
+            const nameInput = document.getElementById('contact-name');
+            const emailInput = document.getElementById('contact-email');
+
+            let message = messageTextarea.value || "";
+            let name = nameInput.value || "Interesado";
+            let email = emailInput.value || "No proporcionado";
+
+            // 2. Construir el mensaje completo con el nombre y email
+            let fullMessage = `Hola SH Ingeniería, soy *${name}* (${email}) y estoy interesado en una cotización. %0A%0A*Mensaje:* ${message}`;
+
+            // 3. Si el campo de mensaje estaba vacío, usamos un texto por defecto
+            if (message.trim() === "") {
+                fullMessage = `Hola SH Ingeniería, soy *${name}* y me gustaría solicitar una cotización para un proyecto. Por favor, contáctenme.`;
+            }
+
+            // 4. Codificar el mensaje para la URL
+            const encodedMessage = encodeURIComponent(fullMessage);
+
+            // 5. Número de WhatsApp de SH Ingeniería (sin +)
+            const phoneNumber = '573113678171';
+
+            // 6. Construir la URL y abrir en una nueva pestaña
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+
+            // Opcional: Limpiar los campos después de abrir WhatsApp
+            messageTextarea.value = '';
+            nameInput.value = '';
+            emailInput.value = '';
+        }
+    </script>
+</body>
+
+</html>
