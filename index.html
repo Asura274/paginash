@@ -297,99 +297,118 @@
             </div>
 
             <!-- Carousel Container -->
-            <div class="relative overflow-hidden w-full group/carousel" id="projects-carousel-container">
-                <!-- Carousel Track -->
-                <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out">
+            <div class="relative w-full group/carousel" id="projects-carousel-container">
 
-                    <!-- Slide 1: Solar -->
-                    <div class="min-w-full md:min-w-[50%] p-4">
-                        <div class="group cursor-pointer">
-                            <div class="overflow-hidden rounded-xl mb-6 relative">
-                                <div
-                                    class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10">
+                <!-- Navigation Buttons -->
+                <button id="prev-button"
+                    class="absolute left-0 top-40 -translate-y-1/2 -translate-x-1/2 md:-translate-x-full z-20 bg-white border-2 border-black rounded-full p-2 hover:scale-110 transition-transform shadow-lg hidden md:flex cursor-pointer">
+                    <i data-lucide="chevron-left" class="w-8 h-8 text-black"></i>
+                </button>
+
+                <button id="next-button"
+                    class="absolute right-0 top-40 -translate-y-1/2 translate-x-1/2 md:translate-x-full z-20 bg-white border-2 border-black rounded-full p-2 hover:scale-110 transition-transform shadow-lg hidden md:flex cursor-pointer">
+                    <i data-lucide="chevron-right" class="w-8 h-8 text-black"></i>
+                </button>
+
+                <!-- Responsive Mobile Buttons (Inside) -->
+                <button id="prev-button-mobile"
+                    class="md:hidden absolute left-2 top-40 -translate-y-1/2 z-20 bg-white/80 backdrop-blur border border-black/10 rounded-full p-2 shadow-lg cursor-pointer">
+                    <i data-lucide="chevron-left" class="w-6 h-6 text-black"></i>
+                </button>
+                <button id="next-button-mobile"
+                    class="md:hidden absolute right-2 top-40 -translate-y-1/2 z-20 bg-white/80 backdrop-blur border border-black/10 rounded-full p-2 shadow-lg cursor-pointer">
+                    <i data-lucide="chevron-right" class="w-6 h-6 text-black"></i>
+                </button>
+
+                <div class="overflow-hidden rounded-xl">
+                    <!-- Carousel Track -->
+                    <div id="carousel-track" class="flex w-full">
+                        <!-- Slide 1: Solar -->
+                        <div class="min-w-full md:min-w-[50%] p-4 carousel-slide">
+                            <div class="group cursor-pointer">
+                                <div class="overflow-hidden rounded-xl mb-6 relative">
+                                    <div
+                                        class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10">
+                                    </div>
+                                    <img src="assets/images/solar.jpg" alt="Paneles Solares"
+                                        class="w-full h-72 object-cover transform group-hover:scale-105 transition-transform duration-700">
                                 </div>
-                                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2000&auto=format&fit=crop"
-                                    alt="Paneles Solares"
-                                    class="w-full h-72 object-cover transform group-hover:scale-105 transition-transform duration-700">
-                            </div>
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h3 class="text-2xl font-bold mb-1">Diseño Sistema Solar</h3>
-                                    <p class="text-gray-600">FV de 5 MW </p>
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h3 class="text-2xl font-bold mb-1">Diseño Sistema Solar</h3>
+                                        <p class="text-gray-600">FV de 5 MW</p>
+                                    </div>
+                                    <span
+                                        class="border border-black px-3 py-1 rounded-full text-xs font-bold uppercase">Solar</span>
                                 </div>
-                                <span
-                                    class="border border-black px-3 py-1 rounded-full text-xs font-bold uppercase">Solar</span>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Slide 2: Red Aérea -->
-                    <div class="min-w-full md:min-w-[50%] p-4">
-                        <div class="group cursor-pointer">
-                            <div class="overflow-hidden rounded-xl mb-6 relative">
-                                <div
-                                    class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10">
+                        <!-- Slide 2: Red Aérea -->
+                        <div class="min-w-full md:min-w-[50%] p-4 carousel-slide">
+                            <div class="group cursor-pointer">
+                                <div class="overflow-hidden rounded-xl mb-6 relative">
+                                    <div
+                                        class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10">
+                                    </div>
+                                    <img src="assets/images/red.jpg" alt="Red Eléctrica"
+                                        class="w-full h-72 object-cover transform group-hover:scale-105 transition-transform duration-700">
                                 </div>
-                                <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2000&auto=format&fit=crop"
-                                    alt="Red Eléctrica"
-                                    class="w-full h-72 object-cover transform group-hover:scale-105 transition-transform duration-700">
-                            </div>
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h3 class="text-2xl font-bold mb-1">Red Aérea</h3>
-                                    <p class="text-gray-600">MT 34.5 kV </p>
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h3 class="text-2xl font-bold mb-1">Red Aérea</h3>
+                                        <p class="text-gray-600">MT 34.5 kV</p>
+                                    </div>
+                                    <span
+                                        class="border border-black px-3 py-1 rounded-full text-xs font-bold uppercase">Media
+                                        Tensión</span>
                                 </div>
-                                <span
-                                    class="border border-black px-3 py-1 rounded-full text-xs font-bold uppercase">Media
-                                    Tensión</span>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Slide 3: Offshore -->
-                    <div class="min-w-full md:min-w-[50%] p-4">
-                        <div class="group cursor-pointer">
-                            <div class="overflow-hidden rounded-xl mb-6 relative">
-                                <div
-                                    class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10">
+                        <!-- Slide 3: Offshore -->
+                        <div class="min-w-full md:min-w-[50%] p-4 carousel-slide">
+                            <div class="group cursor-pointer">
+                                <div class="overflow-hidden rounded-xl mb-6 relative">
+                                    <div
+                                        class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10">
+                                    </div>
+                                    <img src="assets/images/offshore.jpg" alt="Plataforma Offshore"
+                                        class="w-full h-72 object-cover transform group-hover:scale-105 transition-transform duration-700">
                                 </div>
-                                <img src="https://images.unsplash.com/photo-1574689049597-7e6eb5856461?q=80&w=2667&auto=format&fit=crop"
-                                    alt="Plataforma Offshore"
-                                    class="w-full h-72 object-cover transform group-hover:scale-105 transition-transform duration-700">
-                            </div>
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h3 class="text-2xl font-bold mb-1">Plataforma Offshore</h3>
-                                    <p class="text-gray-600">Oil & Gas </p>
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h3 class="text-2xl font-bold mb-1">Plataforma Offshore</h3>
+                                        <p class="text-gray-600">Oil & Gas</p>
+                                    </div>
+                                    <span
+                                        class="border border-black px-3 py-1 rounded-full text-xs font-bold uppercase">Offshore</span>
                                 </div>
-                                <span
-                                    class="border border-black px-3 py-1 rounded-full text-xs font-bold uppercase">Offshore</span>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Slide 4: Domótica -->
-                    <div class="min-w-full md:min-w-[50%] p-4">
-                        <div class="group cursor-pointer">
-                            <div class="overflow-hidden rounded-xl mb-6 relative">
-                                <div
-                                    class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10">
+                        <!-- Slide 4: Domótica -->
+                        <div class="min-w-full md:min-w-[50%] p-4 carousel-slide">
+                            <div class="group cursor-pointer">
+                                <div class="overflow-hidden rounded-xl mb-6 relative">
+                                    <div
+                                        class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10">
+                                    </div>
+                                    <img src="assets/images/domotica.jpg" alt="Casa Inteligente"
+                                        class="w-full h-72 object-cover transform group-hover:scale-105 transition-transform duration-700">
                                 </div>
-                                <img src="https://images.unsplash.com/photo-1558002038-1091a1661116?q=80&w=4000&auto=format&fit=crop"
-                                    alt="Casa Inteligente"
-                                    class="w-full h-72 object-cover transform group-hover:scale-105 transition-transform duration-700">
-                            </div>
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h3 class="text-2xl font-bold mb-1">Domótica Residencial</h3>
-                                    <p class="text-gray-600">Automatización Total </p>
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h3 class="text-2xl font-bold mb-1">Domótica Residencial</h3>
+                                        <p class="text-gray-600">Automatización Total</p>
+                                    </div>
+                                    <span
+                                        class="border border-black px-3 py-1 rounded-full text-xs font-bold uppercase">IoT</span>
                                 </div>
-                                <span
-                                    class="border border-black px-3 py-1 rounded-full text-xs font-bold uppercase">IoT</span>
                             </div>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
             </div>
 
@@ -525,52 +544,143 @@
     </script>
 
     <script>
-        // Carousel Logic
         document.addEventListener('DOMContentLoaded', () => {
             const track = document.getElementById('carousel-track');
-            const slides = track.children;
+            const slides = document.querySelectorAll('.carousel-slide');
             const slideCount = slides.length;
-            let currentIndex = 0;
-            const intervalTime = 3000; // 3 segundos
+            const nextBtn = document.getElementById('next-button');
+            const prevBtn = document.getElementById('prev-button');
+            const nextBtnMobile = document.getElementById('next-button-mobile');
+            const prevBtnMobile = document.getElementById('prev-button-mobile');
 
-            // Ajustar el ancho según el viewport (1 slide movil, 2 slides desktop)
-            // Lógica simplificada: siempre movemos de a 1, pero visible depende de CSS
+            // --- Configuration ---
+            let autoPlayIntervalTime = 3000; // 3 seconds
+            const pauseTimeAfterInteraction = 10000; // 10 seconds
+            let isPaused = false;
+            let autoPlayTimer;
+            let pauseTimer;
+            let currentIndex = 1; // Start at 1 because of clone
+            let isTransitioning = false;
 
-            function updateCarousel() {
-                currentIndex++;
-                if (currentIndex >= slideCount) {
-                    currentIndex = 0;
-                }
+            // --- Clone Slides for Infinite Loop ---
+            // Clone first and last slides for seamless loop
+            const firstClone = slides[0].cloneNode(true);
+            const lastClone = slides[slideCount - 1].cloneNode(true);
 
-                // Calculamos el porcentaje a mover. 
-                // En móvil (min-w-full) es 100% por slide.
-                // En desktop (min-w-[50%]) es 50% por slide.
-                // Sin embargo, como estamos usando flex-basis/width, la propiedad transform translate
-                // se basa en el ancho del elemento contenedor o del slide.
-                // La forma más fácil es mover -100% * currentIndex si fuera 1 visible.
-                // Pero aquí tenemos variables.
+            // Append and Prepend
+            track.append(firstClone);
+            track.prepend(lastClone);
 
-                // Verificamos si es móvil o desktop
+            // Since we added 2 clones (one at start, one at end), and we want to show 2 items on desktop:
+            // The "visible window" issue: 
+            // If we are at the last real slide, we see [Last Real, First Clone]. This is fine.
+            // If we are at First Clone, we jump to First Real.
+            // If we are at First Real, going back takes us to Last Clone.
+
+            // For smoother 2-item view, sometimes checking 2 clones at each end is safer,
+            // but let's try 1 first. If we see a "blank" or glitch when sliding from last to first, we add another.
+
+            const allSlides = track.children;
+            const totalSlides = allSlides.length;
+
+            // --- Initial Positioning ---
+            // We prepended 1 slide, so start at index 1 (Real First Slide)
+            currentIndex = 1;
+
+            function updateWidths() {
                 const isDesktop = window.matchMedia("(min-width: 768px)").matches;
-                const movePercentage = isDesktop ? 50 : 100;
+                const slideWidth = isDesktop ? 50 : 100; // Percentage
 
-                // Ajuste para el loop infinito visual (opcional, aquí haremos reset simple)
-                if (isDesktop && currentIndex === slideCount - 1) {
-                    // Si estamos en el último y mostramos 2, el último quedaría con hueco.
-                    // Resetemos al principio para evitar espacios vacíos o dejarlo así.
-                    // Para simplificar, volvemos al inicio cuando llegamos al "final lógico"
-                    currentIndex = 0;
-                }
-
-                track.style.transform = `translateX(-${currentIndex * movePercentage}%)`;
+                track.style.transition = 'none';
+                track.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
             }
 
-            let carouselInterval = setInterval(updateCarousel, intervalTime);
+            updateWidths();
+            window.addEventListener('resize', updateWidths);
 
-            // Pausar en hover
-            const container = document.getElementById('projects-carousel-container');
-            container.addEventListener('mouseenter', () => clearInterval(carouselInterval));
-            container.addEventListener('mouseleave', () => carouselInterval = setInterval(updateCarousel, intervalTime));
+            function moveToSlide(index) {
+                if (isTransitioning) return;
+                isTransitioning = true;
+                currentIndex = index;
+
+                const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+                const slideWidth = isDesktop ? 50 : 100;
+
+                track.style.transition = 'transform 0.7s ease-in-out';
+                track.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+
+                track.addEventListener('transitionend', () => {
+                    isTransitioning = false;
+
+                    // index 0 is Last Clone. 
+                    // index 1 is Real First.
+                    // index slideCount is Real Last.
+                    // index slideCount+1 is First Clone.
+
+                    // If we reached First Clone (end), jump to Real First
+                    if (currentIndex === slideCount + 1) {
+                        track.style.transition = 'none';
+                        currentIndex = 1;
+                        track.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+                    }
+
+                    // If we reached Last Clone (start), jump to Real Last
+                    if (currentIndex === 0) {
+                        track.style.transition = 'none';
+                        currentIndex = slideCount;
+                        track.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+                    }
+                }, { once: true });
+            }
+
+            function nextSlide() {
+                moveToSlide(currentIndex + 1);
+            }
+
+            function prevSlide() {
+                moveToSlide(currentIndex - 1);
+            }
+
+            function startAutoPlay() {
+                stopAutoPlay();
+                autoPlayTimer = setInterval(() => {
+                    if (!isPaused) {
+                        nextSlide();
+                    }
+                }, autoPlayIntervalTime);
+            }
+
+            function stopAutoPlay() {
+                clearInterval(autoPlayTimer);
+            }
+
+            function pauseInteraction() {
+                isPaused = true;
+                stopAutoPlay();
+
+                clearTimeout(pauseTimer);
+                pauseTimer = setTimeout(() => {
+                    isPaused = false;
+                    startAutoPlay();
+                }, pauseTimeAfterInteraction);
+            }
+
+            // --- Event Listeners ---
+            [nextBtn, nextBtnMobile].forEach(btn => {
+                if (btn) btn.addEventListener('click', () => {
+                    pauseInteraction();
+                    nextSlide();
+                });
+            });
+
+            [prevBtn, prevBtnMobile].forEach(btn => {
+                if (btn) btn.addEventListener('click', () => {
+                    pauseInteraction();
+                    prevSlide();
+                });
+            });
+
+            startAutoPlay();
         });
     </script>
 
